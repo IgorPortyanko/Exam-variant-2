@@ -1,1 +1,56 @@
 @use 'importer' as i;
+
+.btn{
+    width: 210px;
+    height: 60px;
+    border-radius: 50px;
+    @include i.font(inherit, inherit, 500, 1.6, 0.8px)
+}
+
+.header{
+    @include i.d-flex(row, space-between, center, 120px);
+    padding: 32.5px 0;
+
+    .menu{
+        flex: 1 1 auto;
+
+        &__list{
+            @include i.d-flex(row, flex-start, center, 40px);
+        }
+    }
+
+    &__btn{
+        background-color: i.$main-bg-color;
+        border: solid 1px i.$btn-1-bg-color;
+        color: i.$dark-color;
+        position: relative;
+        padding-right: 40px;
+    }
+
+    &__btn::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 14px;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        background-image: url('../assets/img/arrow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+
+    &__btn:hover{
+        background-color: i.$btn-1-bg-color;
+        color: i.$main-bg-color;
+    }
+
+    &__btn:hover::after{
+        background-image: url('../assets/img/arrow-white.svg');
+    }
+}
+
+.hero{
+    
+}

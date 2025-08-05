@@ -81,3 +81,59 @@ html, body {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+.btn {
+  width: 210px;
+  height: 60px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+  padding: 32.5px 0;
+}
+.header .menu {
+  flex: 1 1 auto;
+}
+.header .menu__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+.header__btn {
+  background-color: #fff;
+  border: solid 1px #9C69E2;
+  color: #212353;
+  position: relative;
+  padding-right: 40px;
+}
+.header__btn::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-image: url("../assets/img/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header__btn:hover {
+  background-color: #9C69E2;
+  color: #fff;
+}
+.header__btn:hover::after {
+  background-image: url("../assets/img/arrow-white.svg");
+}/*# sourceMappingURL=main.css.map */
