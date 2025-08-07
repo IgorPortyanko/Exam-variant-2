@@ -6,12 +6,12 @@
     gap: $gap;
 }
 
-@mixin font($family, $size, $weight, $l-height, $let-spase){
+@mixin font($family, $size, $weight, $l-height, $let-space){
     font-family: $family;
     font-size: $size;
     font-weight: $weight;
     line-height: $l-height;
-    letter-spacing: $let-spase;
+    letter-spacing: $let-space;
 }
 
 

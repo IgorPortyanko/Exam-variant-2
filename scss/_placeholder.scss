@@ -1,0 +1,12 @@
+%arrow {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-image: url('../assets/img/arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
