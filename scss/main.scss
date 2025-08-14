@@ -1,104 +1,126 @@
 @use 'importer' as i;
 
-.btn{
+.btn {
     width: 210px;
     height: 60px;
     border-radius: 50px;
     @include i.font(inherit, 1.125rem, 500, 1.6, 0);
 }
 
-h2{
+.section__title {
     @include i.font(i.$font-family-work-sans, 2.5rem, 700, 1.3, 0);
 }
 
-.header{
+.card-container{
+        @include i.d-flex(row, space-between, center, 0);
+        flex-wrap: wrap;
+}
+
+.header {
     @include i.d-flex(row, space-between, center, 120px);
     padding: 20px 0;
     margin-bottom: 100px;
 
-    .menu{
+    .nav {
         flex: 1 1 auto;
 
-        &__list{
+        .menu {
             @include i.d-flex(row, flex-start, center, 40px);
-        }
 
-        &__link{
-            @include i.font(inherit, inherit, 500, 1.6, 0);
-            color: inherit;
-        }
+            &__link {
+                @include i.font(inherit, inherit, 500, 1.6, 0);
+                color: inherit;
+            }
 
-        &__link:hover{
-            color: i.$btn-1-hover-bg-color;
+            &__link:hover {
+                color: i.$btn-1-hover-bg-color;
+            }
         }
     }
 
-    &__btn{
+    &__btn {
         background-color: i.$main-bg-color;
         border: solid 1px i.$btn-1-bg-color;
         color: i.$dark-color;
         position: relative;
         padding-right: 40px;
 
-        &:hover{
+        &:hover {
             background-color: i.$btn-1-bg-color;
             color: i.$main-bg-color;
         }
 
-        &::after{
+        &::after {
             @extend %arrow;
         }
 
-        &:hover::after{
+        &:hover::after {
             background-image: url('../assets/img/arrow-white.svg');
         }
     }
 }
 
-.hero{
+.hero {
     margin-bottom: 100px;
     padding-bottom: 35px;
     background: url('../assets/img/webp/hero.webp') 100% 100% / 65.8% auto no-repeat;
-    
-    h1{
+
+    h1 {
         @include i.font(i.$font-family-work-sans, 5rem, 700, 1.1, 0);
         color: i.$dark-color;
         max-width: 51%;
         margin-bottom: 50px;
     }
 
-    &__text{
+    &__text {
         @include i.font(inherit, 1.125rem, 500, 1.6, 0);
         max-width: 32%;
         margin-bottom: 50px;
     }
 
-    &__btn{
+    &__btn {
         background-color: i.$btn-1-bg-color;
         color: i.$main-bg-color;
 
-        &:hover{
+        &:hover {
             background-color: i.$btn-1-hover-bg-color;
         }
     }
 }
 
-.about{
+.about {
     margin-bottom: 120px;
     border-radius: 50px;
     background-color: i.$pink;
     padding: 75px 70px;
     @include i.d-flex(row, space-between, center, 0);
 
-    &__text{
+    &__text {
         max-width: 500px;
     }
 
-    h2{
+    h2 {
         margin-bottom: 40px;
     }
 
-    &__desc{
+    &__desc {
         @include i.font(inherit, 1.125rem, 500, 1.6, 0);
+    }
+}
+
+.features{
+
+    
+    
+    h2{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .section__subtitle{
+        @include i.font(inherit, 1.125rem, 500, 1.6, 0);
+        text-align: center;
+        max-width: 638px;
+        margin: 0 auto 80px auto;
     }
 }

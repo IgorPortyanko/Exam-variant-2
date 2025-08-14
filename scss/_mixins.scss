@@ -1,4 +1,4 @@
-@mixin d-flex($direction, $justify, $align, $gap){
+@mixin d-flex($direction, $justify, $align, $gap) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
@@ -6,7 +6,7 @@
     gap: $gap;
 }
 
-@mixin font($family, $size, $weight, $l-height, $let-space){
+@mixin font($family, $size, $weight, $l-height, $let-space) {
     font-family: $family;
     font-size: $size;
     font-weight: $weight;
@@ -14,4 +14,17 @@
     letter-spacing: $let-space;
 }
 
-
+@mixin features-bg($url, $top, $right, $width, $height, $deg) {
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    background-image: url($url);
+    top: $top;
+    right: $right;
+    width: $width;
+    height: $height;
+    transform: rotate($deg);
+}
