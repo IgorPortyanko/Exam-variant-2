@@ -40,88 +40,44 @@
 
 .bg-1 {
     background: url(../assets/img/features-bg/bg-1.png) top right / auto 100% no-repeat;
-    z-index: -2;
+    z-index: 0;
 
     &::after {
-
-        @include m.features-bg("../assets/img/features-bg/bg-image-1.svg", 20px, 50px, 195px, 140px, 180deg)
+        @include m.features-bg("../assets/img/features-bg/bg-image-1.svg", 20px, 50px, 195px, 140px, 180deg);
     }
 
     &::before{
-        
-        @include m.features-bg("../assets/img/features-bg/bg-image-2.svg", 62px, 135px, 34px, 20px, 0deg)
+        @include m.features-bg("../assets/img/features-bg/bg-image-2.svg", 62px, 135px, 34px, 20px, 0deg);
     }
 }
 
 .bg-2 {
     background: url(../assets/img/features-bg/bg-2.png) top right / auto 100% no-repeat;
-    z-index: -2;
+    z-index: 0;
 
     &::after {
-        content: '';
-        background-image: url("../assets/img/features-bg/bg-image-1.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        z-index: -1;
-        width: 211px;
-        height: 151px;
+        @include m.features-bg("../assets/img/features-bg/bg-image-1.svg", 229px, 20px, 211px, 151px, 0deg);
     }
 }
 
 .bg-3 {
     background: url(../assets/img/features-bg/bg-3.png) top right / auto 100% no-repeat;
-    z-index: -2;
+    z-index: 0;
 
     &::before{
-        content: '';
-        background-image: url("../assets/img/features-bg/bg-image-2.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: -1;
-        width: 65px;
-        height: 51px;
-        transform: rotate(130deg);
+        @include m.features-bg("../assets/img/features-bg/bg-image-2.svg", 20px, 20px, 65px, 51px, 130deg);
     }
 }
 
 .bg-4 {
     background: url(../assets/img/features-bg/bg-4.png) top right / auto 100% no-repeat;
-    z-index: -2;
+    z-index: 0;
 
     &::after {
-        content: '';
-        background-image: url("../assets/img/features-bg/bg-image-1.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        top: 25px;
-        right: 65px;
-        transform: rotate(300deg);
-        z-index: -1;
-        width: 350px;
-        height: 218px;
+        @include m.features-bg("../assets/img/features-bg/bg-image-1.svg", 25px, 65px, 350px, 218px, 300deg);
     }
 
     &::before{
-        content: '';
-        background-image: url("../assets/img/features-bg/bg-image-2.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        bottom: 25px;
-        right: 25px;
-        z-index: -1;
-        width: 82px;
-        height: 46px;
+        @include m.features-bg("../assets/img/features-bg/bg-image-2.svg", 330px, 20px, 82px, 46px, 0deg);
     }
 }

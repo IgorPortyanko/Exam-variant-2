@@ -1,0 +1,50 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+@use 'placeholder';
+
+.btn {
+    width: 210px;
+    height: 60px;
+    border-radius: 50px;
+    @include m.font(inherit, 1.125rem, 500, 1.6, 0);
+}
+
+.btn--outline {
+    background-color: v.$main-bg-color;
+    border: solid 1px v.$btn-1-bg-color;
+    color: v.$dark-color;
+    position: relative;
+    padding-right: 40px;
+
+    &:hover {
+        background-color: v.$btn-1-bg-color;
+        color: v.$main-bg-color;
+    }
+
+    &::after {
+        @extend %arrow;
+    }
+
+    &:hover::after {
+        background-image: url('../assets/img/arrow-white.svg');
+    }
+}
+
+.btn--violet {
+    background-color: v.$btn-1-bg-color;
+    color: v.$main-bg-color;
+
+    &:hover {
+        background-color: v.$btn-1-hover-bg-color;
+    }
+}
+
+.btn--pink {
+    background-color: v.$btn-2-bg-color;
+    color: v.$main-bg-color;
+
+    &:hover {
+        background-color: v.$btn-2-hover-bg-color;
+    }
+}
+

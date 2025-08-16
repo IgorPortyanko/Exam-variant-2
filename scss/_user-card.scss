@@ -1,0 +1,34 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.user-card{
+    max-width: 465px;
+    padding: 50px 30px;
+    @include m.d-flex(row, space-between, flex-start, 15px);
+    background-color: v.$main-bg-color;
+    border: solid 1px v.$violet-color;
+    border-radius: 50px;
+    z-index: 0;
+
+    &__content{
+        min-width: 300px;
+    }
+
+    &__name{
+        @include m.font(inherit, inherit, 500, 1.6, 0);
+        color: v.$main-color;
+        margin-bottom: 2px;
+    }
+
+    &__link{
+        @include m.font(inherit, 0.875rem, 500, 1.6, 0);
+        color: v.$violet-color;
+        display: inline-block;
+        margin-bottom: 18px;
+    }
+
+    &__content{
+        @include m.font(inherit, inherit, 400, 1.6, 0);
+        max-width: 300px;
+    }
+}
