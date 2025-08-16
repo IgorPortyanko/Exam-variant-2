@@ -7,6 +7,12 @@
     height: 60px;
     border-radius: 50px;
     @include m.font(inherit, 1.125rem, 500, 1.6, 0);
+
+    @media (max-width: 892px){
+        width: 140px;
+        height: 40px;
+        @include m.font(inherit, 1rem, 500, 1.1, 0)
+    }
 }
 
 .btn--outline {

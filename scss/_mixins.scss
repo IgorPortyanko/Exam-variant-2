@@ -28,3 +28,18 @@
     height: $height;
     transform: rotate($deg);
 }
+
+$maxWidth: 1170;
+
+@mixin adaptive-font($max, $min){
+    $addSize: $max - $min;
+    $addMobSize: $addSize + $addSize * 0.7;
+
+    @media(max-width: 767px) {
+        font-size: calc(#{$min + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+
+    @media(min-width: 767px) {
+        font-size: calc(#{$min + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+}
