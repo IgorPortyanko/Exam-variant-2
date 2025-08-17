@@ -2,7 +2,7 @@
 @use 'variables' as v;
 
 .user-card{
-    max-width: 465px;
+    max-width: 47%;
     padding: 50px 30px;
     @include m.d-flex(row, space-between, flex-start, 15px);
     background-color: v.$main-bg-color;
@@ -11,7 +11,7 @@
     z-index: 0;
 
     &__content{
-        min-width: 300px;
+        max-width: 70%;
     }
 
     &__name{
@@ -27,8 +27,22 @@
         margin-bottom: 18px;
     }
 
-    &__content{
+    &__text{
         @include m.font(inherit, inherit, 400, 1.6, 0);
-        max-width: 300px;
+    }
+
+    @media (max-width: 992px) {
+
+        max-width: 465px;
+    }
+
+    @media (max-width: 576px) {
+        @include m.d-flex(column, space-between, center, 15px);
+        text-align: center;
+        padding: 25px, 15px;
+
+        &__content{
+            max-width: 90%;
+        }
     }
 }

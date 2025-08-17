@@ -8,6 +8,11 @@
 .card-container {
     @include i.d-flex(row, space-between, center, 0);
     flex-wrap: wrap;
+
+    @media (max-width: 992px) {
+        @include i.d-flex(column, space-between, center, 20px);
+    }
+
 }
 
 .header {
@@ -58,7 +63,7 @@
         .nav {
             display: flex;
             justify-content: end;
-            margin-right: 20px;
+            margin-right: 30px;
         }
 
         .nav__burger:checked~.menu {
@@ -97,6 +102,8 @@
     }
 
     @media (max-width: 992px) {
+        margin-bottom: 40px;
+
         &__picture {
             position: static;
             width: 100%;
@@ -131,16 +138,39 @@
     padding: 75px 70px;
     @include i.d-flex(row, space-between, center, 0);
 
-    &__text {
-        max-width: 500px;
+    &__img {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        flex-basis: 48%;
     }
 
     h2 {
         margin-bottom: 40px;
     }
 
-    &__desc {
+    &__text {
         @include i.font(inherit, 1.125rem, 500, 1.6, 0);
+    }
+
+    @media (max-width: 992px) {
+        padding: 40px;
+        text-align: center;
+        margin-bottom: 40px;
+        @include i.d-flex(column, space-between, center, 20px);
+
+        h2 {
+            @include i.adaptive-font(40, 18);
+        }
+
+        &__text {
+            @include i.adaptive-font(18, 15);
+
+        }
     }
 }
 
@@ -155,8 +185,30 @@
     .section__subtitle {
         @include i.font(inherit, 1.125rem, 500, 1.6, 0);
         text-align: center;
-        max-width: 638px;
+        max-width: 55%;
         margin: 0 auto 80px auto;
+    }
+
+    @media (max-width: 992px) {
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        @include i.d-flex(column, space-between, center, 20px);
+
+        h2 {
+            @include i.adaptive-font(40, 18);
+            margin-bottom: 25px;
+        }
+
+        .section__subtitle{
+            max-width: 70%;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            @include i.adaptive-font(18, 15);
+
+        }
     }
 }
 
@@ -178,18 +230,28 @@
 
     .shape-1 {
         background: url('../assets/img/testimonials-bg/bg-1.svg') no-repeat center / contain;
-        width: 540px;
-        height: 320px;
+        width: 45%;
+        height: 53%;
         top: 0;
         left: 0;
     }
 
     .shape-2 {
         background: url('../assets/img/testimonials-bg/bg-2.svg') no-repeat center / contain;
-        width: 580px;
-        height: 580px;
+        width: 50%;
+        height: 100%;
         top: 0;
         right: 0;
+    }
+
+    @media (max-width: 992px) {
+        padding: 40px;
+        margin-bottom: 40px;
+
+        h2 {
+            @include i.adaptive-font(40, 18);
+            margin-bottom: 40px;
+        }
     }
 }
 
@@ -198,6 +260,7 @@
 
     &__top {
         @include i.d-flex(row, space-between, center, 0);
+        //flex-wrap: wrap;
         margin-bottom: 100px;
     }
 
@@ -219,7 +282,7 @@
     }
 
     &__middle {
-        @include i.d-flex(row, space-between, center, 0);
+        @include i.d-flex(row, space-between, center, 200px);
         margin-bottom: 100px;
     }
 
@@ -256,7 +319,8 @@
     }
 
     &-nav {
-        @include i.d-flex(row, space-between, flex-start, 169px);
+        @include i.d-flex(row, space-between, flex-start, 30px);
+        flex: 1 1 auto;
 
         .social-items {
             display: flex;
@@ -311,5 +375,48 @@
 
     &__bottom {
         @include i.font(inherit, 0.75rem, 300, 1.8, 0);
+    }
+
+    @media (max-width: 992px) {
+        padding: 40px;
+
+        &__top {
+            @include i.d-flex(column, flex-start, center, 20px);
+            text-align: center
+        }
+
+        &__buttons {
+            display: flex;
+        }
+
+        &__middle {
+            @include i.d-flex(column, space-between, stretch, 40px);
+            margin-bottom: 40px;
+        }
+
+        &-nav{
+            flex-wrap: wrap;
+        }
+
+        &__logo {
+            margin-bottom: 30px;
+        }
+
+        &__contacts-info {
+            p {
+                margin-bottom: 6px;
+            }
+        }
+
+        &-menu {
+
+            &__title {
+                margin-bottom: 15px;
+            }
+        }
+
+        h2 {
+            @include i.adaptive-font(40, 18);
+        }
     }
 }
