@@ -3,6 +3,10 @@
 
 .section__title {
     @include i.font(i.$font-family-work-sans, 2.5rem, 700, 1.3, 0);
+
+    @media (max-width: 1170px){
+        @include i.adaptive-font(40, 20);
+    }
 }
 
 .card-container {
@@ -178,10 +182,6 @@
         margin-bottom: 40px;
         @include i.d-flex(column, space-between, center, 20px);
 
-        h2 {
-            @include i.adaptive-font(40, 18);
-        }
-
         &__text {
             @include i.adaptive-font(18, 15);
 
@@ -211,13 +211,13 @@
         @include i.d-flex(column, space-between, center, 20px);
 
         h2 {
-            @include i.adaptive-font(40, 18);
-            margin-bottom: 25px;
+            margin-bottom: 0;
         }
 
         .section__subtitle {
-            max-width: 70%;
-            margin-bottom: 40px;
+            max-width: 80%;
+            margin-bottom: 30px;
+            @include i.adaptive-font(18, 16);
         }
 
         &__text {
@@ -262,11 +262,16 @@
     @media (max-width: 992px) {
         padding: 40px;
         margin-bottom: 40px;
+        @include i.adaptive-font(16, 14);
 
         h2 {
-            @include i.adaptive-font(40, 18);
             margin-bottom: 40px;
         }
+    }
+
+    @media (max-width: 576px) {
+        padding: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -275,7 +280,6 @@
 
     &__top {
         @include i.d-flex(row, space-between, center, 0);
-        //flex-wrap: wrap;
         margin-bottom: 100px;
     }
 
@@ -428,10 +432,6 @@
             &__title {
                 margin-bottom: 15px;
             }
-        }
-
-        h2 {
-            @include i.adaptive-font(40, 18);
         }
     }
 }
