@@ -3,7 +3,7 @@
 @use 'placeholder';
 
 .features-card {
-    min-width: 48%;
+    max-width: 48%;
     @include m.d-flex(row, flex-start, center, 40px);
     padding: 62px 15px 62px 0;
     margin-bottom: 50px;
@@ -33,6 +33,17 @@
             @extend %arrow;
             right: -40px;
         }
+    }
+
+    @media (max-width: 1170px){
+        &__info{
+            @include m.adaptive-font(16, 14);
+        }
+    }
+
+    @media (max-width: 982px){
+        max-width:none;
+        min-width: 48%;
     }
 
     @media (max-width: 576px){

@@ -101,7 +101,7 @@ html, body {
 }
 
 .features-card {
-  min-width: 48%;
+  max-width: 48%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -142,6 +142,22 @@ html, body {
 }
 .features-card__link::after {
   right: -40px;
+}
+@media (max-width: 1170px) and (max-width: 767px) {
+  .features-card__info {
+    font-size: calc(14px + 3.4 * (100vw - 320px) / 1170);
+  }
+}
+@media (max-width: 1170px) and (min-width: 767px) {
+  .features-card__info {
+    font-size: calc(14px + 2 * 100vw / 1170);
+  }
+}
+@media (max-width: 982px) {
+  .features-card {
+    max-width: none;
+    min-width: 48%;
+  }
 }
 @media (max-width: 576px) {
   .features-card {
