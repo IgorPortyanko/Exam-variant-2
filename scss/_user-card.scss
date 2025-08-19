@@ -2,9 +2,9 @@
 @use 'variables' as v;
 
 .user-card{
-    max-width: 47%;
+    max-width: 45%;
     padding: 50px 30px;
-    @include m.d-flex(row, space-between, flex-start, 15px);
+    @include m.d-flex(row, flex-start, flex-start, 15px);
     background-color: v.$main-bg-color;
     border: solid 1px v.$violet-color;
     border-radius: 50px;
@@ -16,7 +16,7 @@
 
     &__name{
         @include m.font(inherit, inherit, 500, 1.6, 0);
-        color: v.$main-color;
+        color: v.$dark-color;
         margin-bottom: 2px;
     }
 

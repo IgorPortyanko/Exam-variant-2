@@ -6,13 +6,13 @@
     width: 210px;
     height: 60px;
     border-radius: 50px;
-    @include m.font(inherit, 1.125rem, 500, 1.6, 0);
+    @include m.font(inherit, inherit, 500, 1.6, 0);
 
     @media (max-width: 992px){
         display: inline-block;
         width: 140px;
         height: 40px;
-        @include m.font(inherit, 1rem, 500, 1.1, 0)
+        @include m.font(inherit, 0.94rem, 500, 1.1, 0)
     }
 
     @media (max-width: 576px){
